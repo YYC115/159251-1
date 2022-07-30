@@ -3,16 +3,16 @@ import java.util.ResourceBundle;
 
 public class Greeter {
 
-  private Locale locale;
+  private Locale locale1;
   private String name;
 
   public Greeter(String language, String country, String name) {
-    locale = new Locale(language, country);
+    locale1 = new Locale(language, country);
     this.name = name;
   }
 
   public String sayHello() {
-    ResourceBundle messages = ResourceBundle.getBundle("MessagesBundle", locale);
+    ResourceBundle messages = ResourceBundle.getBundle("MessagesBundle", locale1);
     return messages.getString("greeting") + ", " + name;
   }
 
